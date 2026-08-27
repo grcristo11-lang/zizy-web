@@ -1,0 +1,213 @@
+<title>Legales ZIZY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+
+<style>
+  :root {
+    --bg: #ffffff;
+    --panel: #f6f5fc;
+    --ink: #131022;
+    --ink-soft: #37324a;
+    --dim: #676178;
+    --line: rgba(19, 16, 34, 0.10);
+    --line-brand: rgba(109, 75, 255, 0.28);
+    --brand: #6d4bff;
+    --brand-deep: #5326e6;
+    --tile: #0a0a0b;
+    --display: "Sora", system-ui, sans-serif;
+    --body: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, monospace;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; color: var(--ink); background: var(--bg);
+    font-family: var(--body); line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--brand-deep); }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 36px); }
+
+  header.bar { position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,0.9); backdrop-filter: saturate(140%) blur(8px); border-bottom: 1px solid var(--line); }
+  .bar-in { display: flex; align-items: center; gap: 20px; height: 62px; flex-wrap: wrap; }
+  .brandmark { display: flex; align-items: center; gap: 10px; }
+  .brandmark .name { font-family: var(--display); font-weight: 800; letter-spacing: 0.04em; font-size: 1.15rem; }
+  .tabs { display: flex; gap: 6px; margin-left: auto; flex-wrap: wrap; }
+  .tabs a { font-size: 0.86rem; text-decoration: none; color: var(--dim); padding: 7px 13px; border-radius: 999px; }
+  .tabs a:hover { color: var(--ink); background: var(--panel); }
+
+  .intro { padding: clamp(34px, 6vw, 56px) 0 8px; }
+  h1 { font-family: var(--display); font-weight: 800; letter-spacing: -0.02em; font-size: clamp(1.8rem, 4vw, 2.4rem); margin: 0 0 8px; }
+  .updated { font-family: var(--mono); font-size: 0.78rem; color: var(--dim); }
+  .note { background: var(--panel); border: 1px solid var(--line-brand); border-radius: 12px; padding: 14px 18px; font-size: 0.9rem; color: var(--ink-soft); margin: 22px 0; }
+
+  section.doc { padding: clamp(34px, 6vw, 56px) 0; border-top: 1px solid var(--line); }
+  section.doc > h2 { font-family: var(--display); font-weight: 800; font-size: clamp(1.4rem, 3vw, 1.9rem); letter-spacing: -0.02em; margin: 0 0 6px; }
+  section.doc .sub { color: var(--dim); font-size: 0.9rem; margin: 0 0 22px; }
+  h3 { font-family: var(--display); font-weight: 700; font-size: 1.1rem; margin: 28px 0 8px; }
+  p, li { color: var(--ink-soft); }
+  ul { padding-left: 20px; }
+  li { margin: 4px 0; }
+  .ph { background: rgba(255, 214, 0, 0.22); border-radius: 4px; padding: 0 5px; font-family: var(--mono); font-size: 0.85em; color: #6a5200; }
+  strong { color: var(--ink); }
+
+  footer.site { border-top: 1px solid var(--line); padding: 30px 0; color: var(--dim); font-family: var(--mono); font-size: 0.74rem; }
+  footer.site a { color: var(--dim); text-decoration: none; }
+  :focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; border-radius: 6px; }
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <linearGradient id="zg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="0.45" stop-color="#cfcfd2"/><stop offset="1" stop-color="#8a8a8f"/></linearGradient>
+</defs></svg>
+
+<header class="bar">
+  <div class="wrap bar-in">
+    <div class="brandmark">
+      <svg width="30" height="30" viewBox="0 0 512 512" aria-label="ZIZY"><rect width="512" height="512" rx="120" fill="#0a0a0b"/><g transform="translate(56 56) scale(4)"><path d="M10 10 H90 V30 L40 70 H90 V90 H10 V70 L60 30 H10 Z" fill="url(#zg)"/></g></svg>
+      <span class="name">ZIZY</span>
+    </div>
+    <nav class="tabs">
+      <a href="#terminos">Términos</a>
+      <a href="#privacidad">Privacidad</a>
+      <a href="#reembolsos">Reembolsos</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="intro">
+    <h1>Legales de ZIZY</h1>
+    <div class="note">Estos documentos regulan el uso de ZIZY (<strong>zizyapp.com</strong>) (en adelante, “ZIZY”, “nosotros”). Al crear una cuenta o usar el servicio, aceptás estos Términos y estas Políticas.</div>
+  </div>
+
+  <!-- ================= TÉRMINOS ================= -->
+  <section class="doc" id="terminos">
+    <h2>Términos de servicio</h2>
+    <p class="sub">Las reglas de uso del servicio ZIZY.</p>
+
+    <h3>1. Qué es ZIZY</h3>
+    <p>ZIZY es un software de gestión (SaaS) para bares, restaurantes y locales gastronómicos. Permite cargar ventas y comandas, controlar caja, stock, fiados, delivery, equipo y ver la rentabilidad del negocio. Se accede desde el navegador y, opcionalmente, mediante aplicaciones de escritorio y móviles.</p>
+
+    <h3>2. Tu cuenta</h3>
+    <p>Para usar ZIZY necesitás crear una cuenta con datos verdaderos. Sos responsable de mantener la confidencialidad de tu usuario y contraseña, y de toda la actividad que ocurra en tu cuenta. Avisanos de inmediato ante cualquier uso no autorizado.</p>
+
+    <h3>3. Planes, precios y facturación</h3>
+    <ul>
+      <li>ZIZY se ofrece por suscripción, en los planes <strong>Base</strong> y <strong>Pro</strong>, con opción de facturación <strong>mensual o anual</strong>. Los precios vigentes se publican en zizyapp.com.</li>
+      <li>Ofrecemos una <strong>prueba gratuita de 14 días</strong> sin necesidad de tarjeta.</li>
+      <li>Los pagos se procesan a través de <strong>Paddle.com Market Limited</strong> (“Paddle”), que actúa como <em>Merchant of Record</em> (comerciante registrado) y emite el comprobante correspondiente.</li>
+      <li>La suscripción se <strong>renueva automáticamente</strong> al finalizar cada período (mensual o anual) al precio vigente, salvo que la canceles antes.</li>
+      <li>Podés <strong>cancelar cuando quieras</strong>; la cancelación evita el cobro del siguiente período y mantenés el acceso hasta el fin del período ya pagado.</li>
+      <li>Los reembolsos se rigen por la <a href="#reembolsos">Política de reembolso</a>.</li>
+    </ul>
+
+    <h3>4. Tus datos y los datos de tus clientes</h3>
+    <p>La información que cargás en ZIZY (productos, ventas, clientes, empleados, etc.) es <strong>de tu propiedad</strong>. Nos autorizás a procesarla y almacenarla únicamente para prestarte el servicio. Sos el responsable del tratamiento de los datos personales de tus clientes y te comprometés a cumplir la normativa de protección de datos que te resulte aplicable. ZIZY actúa como encargado del tratamiento por cuenta tuya. Podés exportar o solicitar la eliminación de tus datos.</p>
+
+    <h3>5. Uso aceptable</h3>
+    <p>Te comprometés a no usar ZIZY para fines ilegales, ni a intentar vulnerar la seguridad, copiar, revender o realizar ingeniería inversa del sistema. Podemos suspender cuentas que incumplan estas reglas.</p>
+
+    <h3>6. Disponibilidad del servicio</h3>
+    <p>Hacemos nuestro mejor esfuerzo para que ZIZY esté disponible de forma continua, pero no garantizamos un funcionamiento ininterrumpido. Podemos realizar mantenimientos o actualizaciones que afecten temporalmente el servicio.</p>
+
+    <h3>7. Propiedad intelectual</h3>
+    <p>ZIZY, su marca, su logo y su software son de nuestra propiedad. La suscripción te otorga un derecho de uso, no de propiedad.</p>
+
+    <h3>8. Limitación de responsabilidad</h3>
+    <p>ZIZY se ofrece “tal cual”. En la máxima medida permitida por la ley, no seremos responsables por lucro cesante ni por daños indirectos derivados del uso o la imposibilidad de uso del servicio. Nuestra responsabilidad total se limita al monto abonado por vos en los últimos 12 meses.</p>
+
+    <h3>9. Cambios y baja</h3>
+    <p>Podemos actualizar estos Términos; los cambios relevantes se comunicarán por el sitio o por email. El uso continuado implica su aceptación. Podés dar de baja tu cuenta cuando quieras.</p>
+
+    <h3>10. Contacto</h3>
+    <p>Escribinos a <a href="mailto:soporte@zizyapp.com">soporte@zizyapp.com</a>.</p>
+  </section>
+
+  <!-- ================= PRIVACIDAD ================= -->
+  <section class="doc" id="privacidad">
+    <h2>Política de privacidad</h2>
+    <p class="sub">Cómo recolectamos, usamos y protegemos tu información.</p>
+
+    <p>En ZIZY priorizamos la protección de tu privacidad. Esta política explica qué información recolectamos y cómo la tratamos cuando usás el servicio o el sitio zizyapp.com.</p>
+
+    <h3>1. Información que recolectamos</h3>
+    <ul>
+      <li><strong>Datos de tu cuenta:</strong> nombre, email, teléfono y datos de tu local necesarios para crear y administrar tu cuenta.</li>
+      <li><strong>Datos que cargás en el sistema:</strong> productos, ventas, clientes, empleados, proveedores y demás información operativa de tu negocio.</li>
+      <li><strong>Datos de pago:</strong> los procesa <strong>Paddle</strong>. ZIZY <strong>no almacena</strong> los números de tu tarjeta.</li>
+      <li><strong>Datos de uso y navegación:</strong> dispositivo, navegador, dirección IP y actividad dentro del servicio, para mejorar la experiencia y la seguridad.</li>
+      <li><strong>Cookies:</strong> usamos cookies necesarias para el funcionamiento y el inicio de sesión. Podés gestionarlas desde tu navegador.</li>
+    </ul>
+    <p>No solicitamos datos sensibles (salud, opiniones políticas, etc.).</p>
+
+    <h3>2. Cómo usamos la información</h3>
+    <ul>
+      <li>Para prestar, mantener y mejorar el servicio.</li>
+      <li>Para procesar tu suscripción y pagos (vía Paddle).</li>
+      <li>Para brindarte soporte y comunicarte novedades del servicio.</li>
+      <li>Para cumplir obligaciones legales.</li>
+    </ul>
+
+    <h3>3. Con quién la compartimos</h3>
+    <p>No vendemos tu información. La compartimos únicamente con proveedores que nos permiten operar el servicio, bajo obligación de confidencialidad:</p>
+    <ul>
+      <li><strong>Supabase</strong> — base de datos y almacenamiento en la nube.</li>
+      <li><strong>Vercel</strong> — alojamiento (hosting) del sitio y la aplicación.</li>
+      <li><strong>Paddle</strong> — procesamiento de pagos y facturación.</li>
+      <li><strong>Resend</strong> — envío de emails (por ejemplo, el reporte diario).</li>
+    </ul>
+    <p>También podremos divulgar información si la ley lo exige, o en caso de fusión, adquisición o reestructuración del negocio.</p>
+
+    <h3>4. Datos de tus clientes (multi-local)</h3>
+    <p>Los datos que cargás sobre tus clientes son <strong>de tu titularidad</strong>. ZIZY los procesa por cuenta tuya para prestarte el servicio y <strong>no los usa para fines propios</strong>. Sos responsable del uso que hagas de esa información y de informar a tus clientes conforme a la ley aplicable.</p>
+
+    <h3>5. Seguridad</h3>
+    <p>Aplicamos medidas técnicas y organizativas razonables para proteger tu información, incluyendo conexiones cifradas. Ningún sistema es 100% infalible, pero trabajamos para mantener tus datos seguros.</p>
+
+    <h3>6. Conservación y eliminación</h3>
+    <p>Conservamos tu información mientras tu cuenta esté activa. Podés <strong>exportar</strong> tus datos o <strong>solicitar su eliminación</strong> escribiéndonos. Al cerrar tu cuenta, eliminamos o anonimizamos tu información salvo lo que debamos conservar por obligaciones legales.</p>
+
+    <h3>7. Tus derechos</h3>
+    <p>Podés acceder, rectificar o eliminar tus datos, y oponerte a ciertos tratamientos. Para ejercerlos, escribinos a <a href="mailto:soporte@zizyapp.com">soporte@zizyapp.com</a>.</p>
+
+    <h3>8. Menores</h3>
+    <p>ZIZY está dirigido a comercios y no a menores de edad. No recolectamos conscientemente datos de menores.</p>
+
+    <h3>9. Cambios</h3>
+    <p>Podemos actualizar esta política. Publicaremos la versión vigente en esta página con su fecha de actualización.</p>
+
+    <h3>10. Contacto</h3>
+    <p>Por cualquier consulta sobre privacidad: <a href="mailto:soporte@zizyapp.com">soporte@zizyapp.com</a>.</p>
+  </section>
+
+  <!-- ================= REEMBOLSOS ================= -->
+  <section class="doc" id="reembolsos">
+    <h2>Política de reembolso</h2>
+    <p class="sub">Prueba gratis, garantía y cancelaciones.</p>
+
+    <h3>1. Prueba gratuita</h3>
+    <p>Ofrecemos <strong>14 días de prueba gratis</strong>, sin necesidad de tarjeta. Durante ese período no se realiza ningún cobro. Si no continuás, no pagás nada.</p>
+
+    <h3>2. Garantía de 30 días</h3>
+    <p>Si contratás un plan y dentro de los <strong>30 días</strong> siguientes al primer pago no estás conforme, te <strong>devolvemos el importe abonado</strong>. Solo escribinos a <a href="mailto:soporte@zizyapp.com">soporte@zizyapp.com</a> dentro de ese plazo.</p>
+
+    <h3>3. Cancelación</h3>
+    <p>Podés <strong>cancelar tu suscripción cuando quieras</strong> desde tu cuenta o escribiéndonos. La cancelación evita el cobro del siguiente período. Mantenés el acceso hasta el final del período que ya pagaste; no se prorratean períodos en curso, salvo lo previsto en la garantía de 30 días.</p>
+
+    <h3>4. Planes anuales</h3>
+    <p>En el plan anual, la garantía de 30 días aplica sobre el pago anual: si solicitás el reembolso dentro de ese plazo, te devolvemos el total abonado. Pasados los 30 días, la cancelación evita la renovación del siguiente año, sin reembolso del período en curso.</p>
+
+    <h3>5. Cómo se procesan</h3>
+    <p>Los reembolsos se procesan a través de <strong>Paddle</strong>, con el mismo medio de pago utilizado en la compra. El acreditamiento puede demorar según tu banco o proveedor de pago.</p>
+
+    <h3>6. Contacto</h3>
+    <p>Para solicitar un reembolso o cancelar: <a href="mailto:soporte@zizyapp.com">soporte@zizyapp.com</a>.</p>
+  </section>
+
+</div>
+
+<footer class="site">
+  <div class="wrap">© 2026 ZIZY · zizyapp.com · <a href="mailto:soporte@zizyapp.com">soporte@zizyapp.com</a></div>
+</footer>
