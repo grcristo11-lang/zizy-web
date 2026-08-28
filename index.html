@@ -465,6 +465,9 @@
   .stack .si .sv del { color: var(--dim); }
   .stack-line { text-align: center; margin-top: 18px; font-size: 1rem; color: var(--ink-soft); }
   .stack-line strong { color: var(--brand-deep); }
+  .stack.plain { background: #fff; border-color: var(--line); }
+  .impl-badge { display: inline-flex; align-items: center; font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase; color: #fff; background: var(--brand); border-radius: 999px; padding: 7px 16px; margin-bottom: 12px; box-shadow: 0 12px 26px -10px rgba(109,75,255,0.65); }
+  .block-gap { margin-top: clamp(48px, 6vw, 76px); }
 
   /* nota "ejemplo ilustrativo" */
   .illus { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.06em; color: var(--dim); text-transform: uppercase; margin-top: 12px; }
@@ -931,25 +934,38 @@
 
 <!-- ================= 16 · OFERTA (Hormozi) ================= -->
 <section>
+  <!-- BLOQUE 1 · Todo lo que incluye ZIZY -->
   <div class="wrap sec-head center reveal">
-    <span class="eyebrow">Te lo dejamos listo para empezar</span>
-    <h2 class="big">Nosotros configuramos ZIZY. Tu equipo aprende a usarlo en minutos.</h2>
-    <p class="lead" style="margin-left:auto;margin-right:auto">No tienes que empezar desde cero. Preparamos ZIZY para tu negocio y dejamos todo listo para que puedas comenzar a facturar.</p>
-    <p class="lead" style="margin-left:auto;margin-right:auto">Y cuando tu equipo necesite aprender una función, tiene videos cortos paso a paso en nuestro canal de YouTube.</p>
+    <span class="eyebrow">Todo ZIZY, un solo plan</span>
+    <h2 class="big">Todo lo que incluye ZIZY</h2>
+  </div>
+  <div class="wrap reveal" style="display:flex;justify-content:center">
+    <div class="stack plain">
+      <div class="si"><span class="sl"><span class="sck">✓</span><span class="sn">Sistema ZIZY completo</span></span><span class="sv">Incluido</span></div>
+      <div class="si"><span class="sl"><span class="sck">✓</span><span class="sn">Tienda online</span></span><span class="sv">Incluida</span></div>
+      <div class="si"><span class="sl"><span class="sck">✓</span><span class="sn">Carta QR</span></span><span class="sv">Incluida</span></div>
+      <div class="si"><span class="sl"><span class="sck">✓</span><span class="sn">Soporte</span></span><span class="sv">Incluido</span></div>
+      <div class="si"><span class="sl"><span class="sck">✓</span><span class="sn">Capacitación en video</span></span><span class="sv">Incluida</span></div>
+    </div>
+  </div>
+
+  <!-- BLOQUE 2 · Implementación gratis -->
+  <div class="wrap sec-head center reveal block-gap">
+    <span class="impl-badge">Implementación gratis</span>
+    <span class="eyebrow" style="letter-spacing:0.1em">Además, te ahorramos todo el trabajo de empezar desde cero</span>
+    <h2 class="big">Nosotros dejamos ZIZY listo para tu negocio.</h2>
+    <p class="lead" style="margin-left:auto;margin-right:auto">No tienes que pasar días configurando todo. Nosotros hacemos el trabajo inicial para que puedas empezar con ZIZY preparado para funcionar.</p>
   </div>
   <div class="wrap reveal" style="display:flex;justify-content:center">
     <div class="stack">
-      <div class="si"><span class="sl"><span class="sck">✓</span><span class="sn">Sistema ZIZY completo</span></span><span class="sv">Incluido</span></div>
-      <div class="si"><span class="sl"><span class="sck">✓</span><span class="sn">Configuración inicial</span></span><span class="sv"><del>US$150</del> Incluida</span></div>
-      <div class="si"><span class="sl"><span class="sck">✓</span><span class="sn">Carga inicial de productos</span></span><span class="sv">Incluida</span></div>
-      <div class="si"><span class="sl"><span class="sck">✓</span><span class="sn">Recetas y costos configurados</span></span><span class="sv">Incluida</span></div>
-      <div class="si"><span class="sl"><span class="sck">✓</span><span class="sn">Tienda online</span></span><span class="sv">Incluida</span></div>
-      <div class="si"><span class="sl"><span class="sck">✓</span><span class="sn">Carta QR</span></span><span class="sv">Incluida</span></div>
-      <div class="si"><span class="sl"><span class="sck">✓</span><span class="sn">Capacitación</span></span><span class="sv">Incluida</span></div>
-      <div class="si"><span class="sl"><span class="sck">✓</span><span class="sn">Soporte</span></span><span class="sv">Incluido</span></div>
+      <div class="si"><span class="sl"><span class="sck">✓</span><span class="sn">Configuración inicial del negocio</span></span><span class="sv"><del>US$40</del> Incluida</span></div>
+      <div class="si"><span class="sl"><span class="sck">✓</span><span class="sn">Carga inicial de productos</span></span><span class="sv"><del>US$60</del> Incluida</span></div>
+      <div class="si"><span class="sl"><span class="sck">✓</span><span class="sn">Configuración de recetas y costos</span></span><span class="sv"><del>US$70</del> Incluida</span></div>
+      <div class="si"><span class="sl"><span class="sck">✓</span><span class="sn">Configuración de tienda online y carta QR</span></span><span class="sv"><del>US$50</del> Incluida</span></div>
+      <div class="si"><span class="sl"><span class="sck">✓</span><span class="sn">Puesta en marcha y capacitación inicial</span></span><span class="sv"><del>US$50</del> Incluida</span></div>
     </div>
   </div>
-  <p class="stack-line reveal">La configuración inicial vale <strong>US$150</strong> — va incluida cuando empiezas.</p>
+  <p class="stack-line reveal">Un trabajo que vale <strong>US$270</strong> — va incluido gratis cuando empiezas.</p>
   <div class="wrap sec-head center reveal" style="margin-top:22px">
     <a class="btn primary" href="https://app.zizyapp.com/?registro=1">Probar ZIZY gratis</a>
     <p class="cta-sub" style="margin-top:14px">14 días gratis · Sin tarjeta</p>
