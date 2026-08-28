@@ -468,6 +468,14 @@
   .stack.plain { background: #fff; border-color: var(--line); }
   .impl-badge { display: inline-flex; align-items: center; font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase; color: #fff; background: var(--brand); border-radius: 999px; padding: 7px 16px; margin-bottom: 12px; box-shadow: 0 12px 26px -10px rgba(109,75,255,0.65); }
   .block-gap { margin-top: clamp(72px, 10vw, 112px); }
+  /* cierre visual de la implementación (US$0 protagonista) */
+  .impl-close { text-align: center; margin-top: clamp(34px, 5vw, 52px); }
+  .impl-close .ic-label { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--dim); }
+  .impl-close .ic-old { font-family: var(--mono); font-size: 1.15rem; color: var(--dim); margin-top: 8px; }
+  .impl-close .ic-old del { text-decoration-thickness: 2px; text-decoration-color: var(--dim); }
+  .impl-close .ic-pay { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brand-deep); margin-top: 16px; }
+  .impl-close .ic-zero { font-family: var(--display); font-weight: 800; font-size: clamp(3rem, 11vw, 5rem); line-height: 1; letter-spacing: -0.03em; color: var(--brand-deep); margin-top: 4px; }
+  .impl-close .ic-sub { color: var(--dim); font-size: 0.95rem; line-height: 1.5; max-width: 42ch; margin: 18px auto 0; }
 
   /* nota "ejemplo ilustrativo" */
   .illus { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.06em; color: var(--dim); text-transform: uppercase; margin-top: 12px; }
@@ -967,7 +975,13 @@
       <div class="si"><span class="sl"><span class="sck">✓</span><span class="sn">Puesta en marcha y capacitación inicial</span></span><span class="sv"><del>US$50</del> Incluida</span></div>
     </div>
   </div>
-  <p class="stack-line reveal">Un trabajo que vale <strong>US$270</strong> — va incluido gratis cuando empiezas.</p>
+  <div class="wrap reveal impl-close">
+    <div class="ic-label">Valor total de implementación</div>
+    <div class="ic-old"><del>US$270</del></div>
+    <div class="ic-pay">Tú pagas</div>
+    <div class="ic-zero">US$0</div>
+    <div class="ic-sub">Nosotros hacemos el trabajo inicial. Tú empiezas con ZIZY listo para usar.</div>
+  </div>
   <div class="wrap sec-head center reveal" style="margin-top:22px">
     <a class="btn primary" href="https://app.zizyapp.com/?registro=1">Probar ZIZY gratis</a>
     <p class="cta-sub" style="margin-top:14px">14 días gratis · Sin tarjeta</p>
