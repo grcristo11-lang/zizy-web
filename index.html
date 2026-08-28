@@ -208,7 +208,7 @@
 
   /* tabla comparativa Otros vs ZIZY */
   .vs-wrap { margin-top: 36px; overflow-x: auto; border: 1px solid var(--line); border-radius: 18px; }
-  .vs { width: 100%; border-collapse: collapse; min-width: 520px; }
+  .vs { width: 100%; border-collapse: separate; border-spacing: 0; min-width: 520px; }
   .vs th, .vs td { padding: 15px 20px; border-bottom: 1px solid var(--line); text-align: left; }
   .vs thead th { font-family: var(--display); font-weight: 700; font-size: 0.98rem; }
   .vs thead th.c { text-align: center; }
@@ -217,7 +217,9 @@
   .vs td.mark { text-align: center; font-family: var(--mono); font-weight: 700; width: 140px; }
   .vs td.no { color: var(--dim); }
   .vs td.yes { color: var(--brand); font-weight: 800; }
-  .vs .zcol { background: rgba(109,75,255,0.06); }
+  .vs .zcol { background: rgba(109,75,255,0.07); border-left: 1px solid var(--line-brand); }
+  .vs thead th.zcol { border-top-left-radius: 14px; }
+  .vs tbody tr:last-child td.zcol { border-bottom-left-radius: 14px; }
   .vs tbody tr:last-child td { border-bottom: none; }
   .vs-note { text-align: center; color: var(--dim); font-size: 0.82rem; margin-top: 14px; }
 
@@ -327,7 +329,7 @@
     .kpis { grid-template-columns: 1fr; }
     .bar .cta-row .btn { display: none; }
     /* tabla comparativa: que entre justa sin scroll horizontal */
-    .vs-wrap { overflow-x: visible; }
+    .vs-wrap { overflow: hidden; }
     .vs { min-width: 0; table-layout: fixed; }
     .vs th, .vs td { padding: 10px 7px; }
     .vs thead th { font-size: 0.72rem; }
