@@ -247,10 +247,22 @@
   .avatares-sec { position: relative; overflow: hidden; }
   .avatares-sec > .wrap { position: relative; z-index: 1; }
   .food-fx { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
-  .food-ico { position: absolute; color: var(--brand); opacity: 0.07; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; animation: foodFloat 17s ease-in-out infinite; will-change: transform; }
-  @keyframes foodFloat { 0%,100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-20px) rotate(5deg); } }
+  .food-ico { position: absolute; color: var(--brand); opacity: 0.14; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; animation: foodFloat 13s ease-in-out infinite; will-change: transform; }
+  @keyframes foodFloat {
+    0%   { transform: translate(0,0) rotate(0deg); }
+    25%  { transform: translate(14px,-24px) rotate(7deg); }
+    50%  { transform: translate(-8px,-36px) rotate(-5deg); }
+    75%  { transform: translate(-16px,-16px) rotate(6deg); }
+    100% { transform: translate(0,0) rotate(0deg); }
+  }
+  .food-ico:nth-child(1) { animation-duration: 12s; }
+  .food-ico:nth-child(2) { animation-duration: 15s; }
+  .food-ico:nth-child(3) { animation-duration: 11s; }
+  .food-ico:nth-child(4) { animation-duration: 14s; }
+  .food-ico:nth-child(5) { animation-duration: 16s; }
+  .food-ico:nth-child(6) { animation-duration: 10s; }
   @media (prefers-reduced-motion: reduce) { .food-ico { animation: none; } }
-  @media (max-width: 620px) { .food-ico { opacity: 0.06; transform: scale(0.8); } }
+  @media (max-width: 620px) { .food-ico { opacity: 0.11; } }
 
   /* ---------- Testimonials ---------- */
   .tgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-top: 32px; }
