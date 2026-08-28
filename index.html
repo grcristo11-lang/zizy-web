@@ -477,6 +477,15 @@
     .mapx .to { font-size: 0.92rem; }
   }
 
+  /* diagrama vertical del mecanismo (Cómo funciona) */
+  .flow-v { max-width: 660px; margin: 40px auto 0; text-align: center; }
+  .flow-v .fv-inputs, .flow-v .fv-outputs { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+  .flow-v .flow-tag { flex: 0 0 auto; }
+  .flow-v .flow-tag.out { border-color: var(--line-brand); color: var(--brand-deep); background: rgba(109,75,255,0.04); font-weight: 500; }
+  .flow-v .fv-arrow { color: var(--brand); font-size: 1.7rem; font-weight: 700; line-height: 1; margin: 16px 0; }
+  .flow-v .flow-hub { display: inline-block; min-width: 240px; }
+  .flow-v .fv-result { display: inline-block; margin-top: 18px; font-family: var(--display); font-weight: 800; font-size: clamp(1.25rem, 3.2vw, 1.75rem); letter-spacing: -0.01em; color: #fff; background: linear-gradient(135deg, #5326e6, #6d4bff); padding: 14px 30px; border-radius: 16px; box-shadow: 0 22px 48px -22px rgba(109,75,255,0.75); }
+
 </style>
 </head>
 <body>
@@ -596,22 +605,26 @@
       <p class="lead">Cada pedido, compra, receta, sueldo, gasto, merma y movimiento que registrás alimenta la información de tu negocio. ZIZY cruza esos datos para mostrarte cuánto vendiste, cuánto gastaste, qué margen tuviste y cuánto te quedó realmente.</p>
     </div>
 
-    <div class="flow reveal">
-      <div class="flow-col">
+    <div class="flow-v reveal">
+      <div class="fv-inputs">
         <span class="flow-tag">Pedidos</span>
         <span class="flow-tag">Recetas</span>
         <span class="flow-tag">Compras</span>
         <span class="flow-tag">Caja</span>
+        <span class="flow-tag">Personal</span>
+        <span class="flow-tag">Delivery</span>
+        <span class="flow-tag">Mermas</span>
+        <span class="flow-tag">Gastos</span>
       </div>
-      <div class="flow-arrow">→</div>
+      <div class="fv-arrow">↓</div>
       <div class="flow-hub"><b>Método ZIZY</b><small>cruza todo</small></div>
-      <div class="flow-arrow">→</div>
-      <div class="flow-col flow-out">
-        <span class="flow-tag">Facturación</span>
-        <span class="flow-tag">Costos</span>
-        <span class="flow-tag">Margen</span>
-        <span class="flow-tag">Ganancia</span>
+      <div class="fv-arrow">↓</div>
+      <div class="fv-outputs">
+        <span class="flow-tag out">Facturación</span>
+        <span class="flow-tag out">Costos</span>
+        <span class="flow-tag out">Margen</span>
       </div>
+      <div class="fv-result">Ganancia real</div>
     </div>
 
     <p class="punch center reveal">No solo sabés cuánto vendiste. Entendés <em>qué pasó con esa plata.</em></p>
