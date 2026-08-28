@@ -34,7 +34,7 @@
     --ok-bg: rgba(18, 161, 95, 0.10);
     --danger: #e23b39;
     --warn: #c98a00;
-    --maxw: 1120px;
+    --maxw: 1200px;
     --display: "Sora", system-ui, sans-serif;
     --body: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
     --mono: "IBM Plex Mono", ui-monospace, monospace;
@@ -149,14 +149,14 @@
   /* hero screenshot (producto real) */
   .hero-copy { max-width: 760px; }
   .hero-shot { margin: 0; }
-  .browser-frame { margin-top: clamp(32px, 5vw, 56px); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; background: #0d0d0f; box-shadow: 0 44px 100px -46px rgba(40,24,90,0.5); }
+  .browser-frame { margin: clamp(24px, 4vw, 48px) 0 0; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; background: #0d0d0f; box-shadow: 0 44px 100px -46px rgba(40,24,90,0.5); }
   .bf-bar { display: flex; align-items: center; padding: 11px 16px; background: #18181b; border-bottom: 1px solid rgba(255,255,255,0.06); }
   .bf-dots { display: flex; gap: 7px; }
   .bf-dots i { width: 11px; height: 11px; border-radius: 50%; display: block; }
   .bf-url { margin-left: 14px; font-family: var(--mono); font-size: 0.74rem; color: #86868b; }
   .shot { display: block; width: 100%; height: auto; }
   .shot-cap { text-align: center; color: var(--dim); font-size: 0.86rem; margin-top: 14px; }
-  .phone { width: 100%; max-width: 246px; margin: 0 auto; position: relative; background: #0a0a0b; border-radius: 42px; padding: 12px; box-shadow: 0 44px 96px -44px rgba(40,24,90,0.5); }
+  .phone { width: 100%; max-width: 300px; margin: 0 auto; position: relative; background: #0a0a0b; border-radius: 42px; padding: 12px; box-shadow: 0 44px 96px -44px rgba(40,24,90,0.5); }
   .phone::before { content: ""; position: absolute; top: 12px; left: 50%; transform: translateX(-50%); width: 40%; height: 20px; background: #0a0a0b; border-radius: 0 0 14px 14px; z-index: 3; }
   .phone .screen { border-radius: 30px; overflow: hidden; background: #f4f4f6; aspect-ratio: 9 / 17; }
   .phone .screen img { display: block; width: 100%; height: auto; }
@@ -174,7 +174,7 @@
   .band.violeta p { color: rgba(255,255,255,0.9); }
 
   /* ---------- Feature rows ---------- */
-  .feat { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 64px); align-items: center; }
+  .feat { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(22px, 3.5vw, 44px); align-items: center; }
   .feat.rev .copy { order: 2; }
   .feat .copy h2 { font-size: clamp(1.5rem, 3.2vw, 2.2rem); font-weight: 800; line-height: 1.1; }
   .feat .copy p { color: var(--dim); margin: 14px 0 0; max-width: 46ch; }
