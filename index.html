@@ -69,8 +69,9 @@
     border-bottom: 1px solid var(--line);
   }
   .bar-in { display: flex; align-items: center; justify-content: space-between; height: 66px; }
-  .brandmark { display: flex; align-items: center; gap: 11px; }
-  .brandmark .name { font-family: var(--display); font-weight: 800; letter-spacing: 0.04em; font-size: 1.22rem; }
+  .brandmark { display: flex; align-items: center; gap: 11px; text-decoration: none; color: inherit; cursor: pointer; }
+  .brandmark .name { font-family: var(--display); font-weight: 800; letter-spacing: 0.04em; font-size: 1.22rem; color: var(--ink); }
+  a.brandmark:hover { opacity: 0.82; }
   .nav-links { display: flex; gap: 26px; font-size: 0.92rem; color: var(--dim); }
   .nav-links a { text-decoration: none; }
   .nav-links a:hover { color: var(--ink); }
@@ -403,15 +404,15 @@
 <div class="bg-fx" aria-hidden="true"></div>
 
 <!-- ================= TOP BAR ================= -->
-<header class="bar">
+<header class="bar" id="inicio">
   <div class="wrap bar-in">
-    <div class="brandmark">
+    <a href="#inicio" class="brandmark" aria-label="Volver al inicio">
       <svg width="34" height="34" viewBox="0 0 512 512" aria-label="ZIZY">
         <rect width="512" height="512" rx="120" fill="#0a0a0b"/>
         <g transform="translate(56 56) scale(4)"><path d="M10 10 H90 V30 L40 70 H90 V90 H10 V70 L60 30 H10 Z" fill="url(#zg)"/></g>
       </svg>
       <span class="name">ZIZY</span>
-    </div>
+    </a>
     <nav class="nav-links">
       <a href="#funciones">Funciones</a>
       <a href="#precios">Precios</a>
