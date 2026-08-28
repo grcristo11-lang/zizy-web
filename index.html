@@ -243,6 +243,14 @@
   .avatar-pill { display: inline-flex; align-items: center; gap: 9px; font-family: var(--display); font-weight: 600; font-size: 0.94rem; padding: 10px 18px; border: 1px solid var(--line-brand); border-radius: 999px; background: #fff; color: var(--ink); }
   .avatar-pill svg { width: 18px; height: 18px; color: var(--brand); flex-shrink: 0; }
   .avatar-pill.soft { border-color: var(--line); color: var(--dim); }
+  /* fondo sutil de comida (flotante) */
+  .avatares-sec { position: relative; overflow: hidden; }
+  .avatares-sec > .wrap { position: relative; z-index: 1; }
+  .food-fx { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
+  .food-ico { position: absolute; color: var(--brand); opacity: 0.07; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; animation: foodFloat 17s ease-in-out infinite; will-change: transform; }
+  @keyframes foodFloat { 0%,100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-20px) rotate(5deg); } }
+  @media (prefers-reduced-motion: reduce) { .food-ico { animation: none; } }
+  @media (max-width: 620px) { .food-ico { opacity: 0.06; transform: scale(0.8); } }
 
   /* ---------- Testimonials ---------- */
   .tgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-top: 32px; }
@@ -564,6 +572,14 @@
 
 <!-- ================= 2 · AVATAR ================= -->
 <section class="avatares-sec">
+  <div class="food-fx" aria-hidden="true">
+    <svg class="food-ico" style="top:10%;left:5%;width:96px;height:96px;animation-delay:0s" viewBox="0 0 64 64"><path d="M6 26C6 16 17 11 32 11s26 5 26 15"/><path d="M6 26h52"/><path d="M9 34h46"/><path d="M9 41h46"/><path d="M6 41c0 8 12 12 26 12s26-4 26-12"/></svg>
+    <svg class="food-ico" style="top:14%;right:7%;width:82px;height:82px;animation-delay:-3s" viewBox="0 0 64 64"><path d="M32 7l24 47H8L32 7z"/><circle cx="27" cy="35" r="3"/><circle cx="38" cy="43" r="3"/><circle cx="30" cy="47" r="2.5"/></svg>
+    <svg class="food-ico" style="bottom:10%;left:10%;width:74px;height:74px;animation-delay:-6s" viewBox="0 0 64 64"><path d="M14 24h30v14a10 10 0 01-10 10H24a10 10 0 01-10-10V24z"/><path d="M44 28h4a6 6 0 010 12h-4"/><path d="M22 10c0 4-3 5-3 9M30 10c0 4-3 5-3 9M38 10c0 4-3 5-3 9"/></svg>
+    <svg class="food-ico" style="bottom:12%;right:9%;width:70px;height:70px;animation-delay:-9s" viewBox="0 0 64 64"><path d="M20 20h24l-4 32H24L20 20z"/><path d="M18 20h28"/><path d="M42 8L36 20"/></svg>
+    <svg class="food-ico" style="top:44%;left:44%;width:64px;height:64px;animation-delay:-12s" viewBox="0 0 64 64"><path d="M22 26h20L32 54 22 26z"/><circle cx="32" cy="18" r="10"/></svg>
+    <svg class="food-ico" style="top:52%;right:16%;width:60px;height:60px;animation-delay:-8s" viewBox="0 0 64 64"><path d="M20 8v12M26 8v12M32 8v12M26 20v36M20 20c0 4 3 6 6 6s6-2 6-6"/><path d="M46 8c-4 5-5 13-5 19s2 7 5 7v22"/></svg>
+  </div>
   <div class="wrap reveal">
     <span class="eyebrow">Hecho para gastronómicos</span>
     <h2 class="big">¿Tienes una hamburguesería, pizzería, parrilla, delivery o foodtruck?</h2>
