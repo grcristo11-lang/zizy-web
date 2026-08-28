@@ -45,7 +45,7 @@
   .tabs a { font-size: 0.86rem; text-decoration: none; color: var(--dim); padding: 7px 13px; border-radius: 999px; }
   .tabs a:hover { color: var(--ink); background: var(--panel); }
   @media (max-width: 600px) {
-    .bar-in { height: auto; min-height: 54px; padding: 9px 0 11px; row-gap: 9px; column-gap: 12px; }
+    .bar-in { height: auto; min-height: 54px; padding: calc(15px + env(safe-area-inset-top, 0px)) 0 12px; row-gap: 9px; column-gap: 12px; }
     .tabs { margin-left: 0; width: 100%; justify-content: center; gap: 7px; }
     .tabs a { font-size: 0.8rem; padding: 6px 13px; background: var(--panel); border: 1px solid var(--line); }
     .intro { padding-top: 26px; }
