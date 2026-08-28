@@ -37,7 +37,9 @@
 
   header.bar { position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,0.9); backdrop-filter: saturate(140%) blur(8px); border-bottom: 1px solid var(--line); }
   .bar-in { display: flex; align-items: center; gap: 20px; height: 62px; flex-wrap: wrap; }
-  .brandmark { display: flex; align-items: center; gap: 10px; }
+  .brandmark { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; cursor: pointer; }
+  .brandmark .name { color: var(--ink); }
+  .brandmark:hover { opacity: 0.82; }
   .brandmark .name { font-family: var(--display); font-weight: 800; letter-spacing: 0.04em; font-size: 1.15rem; }
   .tabs { display: flex; gap: 6px; margin-left: auto; flex-wrap: wrap; }
   .tabs a { font-size: 0.86rem; text-decoration: none; color: var(--dim); padding: 7px 13px; border-radius: 999px; }
@@ -71,10 +73,10 @@
 
 <header class="bar">
   <div class="wrap bar-in">
-    <div class="brandmark">
+    <a href="/" class="brandmark" aria-label="Volver al inicio">
       <svg width="30" height="30" viewBox="0 0 512 512" aria-label="ZIZY"><rect width="512" height="512" rx="120" fill="#0a0a0b"/><g transform="translate(56 56) scale(4)"><path d="M10 10 H90 V30 L40 70 H90 V90 H10 V70 L60 30 H10 Z" fill="url(#zg)"/></g></svg>
       <span class="name">ZIZY</span>
-    </div>
+    </a>
     <nav class="tabs">
       <a href="#terminos">Términos</a>
       <a href="#privacidad">Privacidad</a>
