@@ -247,7 +247,7 @@
   .avatares-sec { position: relative; overflow: hidden; }
   .avatares-sec > .wrap { position: relative; z-index: 1; }
   .food-fx { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
-  .food-ico { position: absolute; color: var(--brand); opacity: 0.14; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; animation: foodFloat 13s ease-in-out infinite; will-change: transform; }
+  .food-ico { position: absolute; color: var(--brand); opacity: 0.2; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; animation: foodFloat 13s ease-in-out infinite; will-change: transform; }
   @keyframes foodFloat {
     0%   { transform: translate(0,0) rotate(0deg); }
     25%  { transform: translate(14px,-24px) rotate(7deg); }
@@ -261,8 +261,13 @@
   .food-ico:nth-child(4) { animation-duration: 14s; }
   .food-ico:nth-child(5) { animation-duration: 16s; }
   .food-ico:nth-child(6) { animation-duration: 10s; }
+  .food-ico:nth-child(7) { animation-duration: 13s; }
+  .food-ico:nth-child(8) { animation-duration: 16s; }
+  .food-ico:nth-child(9) { animation-duration: 11s; }
+  .food-ico:nth-child(10) { animation-duration: 14s; }
+  .food-ico:nth-child(11) { animation-duration: 12s; }
   @media (prefers-reduced-motion: reduce) { .food-ico { animation: none; } }
-  @media (max-width: 620px) { .food-ico { opacity: 0.11; } }
+  @media (max-width: 620px) { .food-ico { opacity: 0.16; } }
 
   /* ---------- Testimonials ---------- */
   .tgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-top: 32px; }
@@ -591,6 +596,11 @@
     <svg class="food-ico" style="bottom:12%;right:9%;width:70px;height:70px;animation-delay:-9s" viewBox="0 0 64 64"><path d="M20 20h24l-4 32H24L20 20z"/><path d="M18 20h28"/><path d="M42 8L36 20"/></svg>
     <svg class="food-ico" style="top:44%;left:44%;width:64px;height:64px;animation-delay:-12s" viewBox="0 0 64 64"><path d="M22 26h20L32 54 22 26z"/><circle cx="32" cy="18" r="10"/></svg>
     <svg class="food-ico" style="top:52%;right:16%;width:60px;height:60px;animation-delay:-8s" viewBox="0 0 64 64"><path d="M20 8v12M26 8v12M32 8v12M26 20v36M20 20c0 4 3 6 6 6s6-2 6-6"/><path d="M46 8c-4 5-5 13-5 19s2 7 5 7v22"/></svg>
+    <svg class="food-ico" style="top:6%;left:34%;width:84px;height:84px;animation-delay:-4s" viewBox="0 0 64 64"><circle cx="32" cy="32" r="24"/><path d="M32 8v48M8 32h48M15 15l34 34M49 15L15 49"/><circle cx="24" cy="26" r="2.5"/><circle cx="40" cy="28" r="2.5"/><circle cx="34" cy="42" r="2.5"/></svg>
+    <svg class="food-ico" style="bottom:6%;left:38%;width:76px;height:76px;animation-delay:-11s" viewBox="0 0 64 64"><path d="M8 44a24 24 0 0148 0z"/><path d="M8 44h48"/><path d="M15 44c2-6 4-7 6-7M27 44c1-6 3-8 5-8M39 44c1-6 3-7 5-7"/></svg>
+    <svg class="food-ico" style="top:30%;right:3%;width:70px;height:70px;animation-delay:-7s" viewBox="0 0 64 64"><circle cx="32" cy="32" r="22"/><circle cx="32" cy="32" r="9"/><path d="M24 16l3 5M40 16l-2 5M50 26l-5 2M18 40l5-2M44 46l-3-4"/></svg>
+    <svg class="food-ico" style="top:72%;left:24%;width:74px;height:74px;animation-delay:-2s" viewBox="0 0 64 64"><rect x="8" y="26" width="48" height="13" rx="6.5"/><path d="M14 32c3-2 5 0 8-2s5 0 8-2 5 0 8-2 5 0 8-2"/></svg>
+    <svg class="food-ico" style="top:60%;right:36%;width:62px;height:62px;animation-delay:-13s" viewBox="0 0 64 64"><path d="M20 24h24l-3 30H23L20 24z"/><path d="M16 24h32"/><rect x="16" y="17" width="32" height="7" rx="2.5"/><path d="M40 6v11"/></svg>
   </div>
   <div class="wrap reveal">
     <span class="eyebrow">Hecho para gastronómicos</span>
