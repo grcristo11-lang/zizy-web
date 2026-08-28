@@ -172,6 +172,10 @@
   .band.violeta { background: linear-gradient(135deg, #5326e6 0%, #6d4bff 100%); box-shadow: 0 34px 70px -40px rgba(109,75,255,0.6); }
   .band.violeta .eyebrow { color: #ded4ff; }
   .band.violeta p { color: rgba(255,255,255,0.9); }
+  /* tags del diagrama dentro del bloque violeta: legibles */
+  .band .flow-tag { background: #fff; color: var(--ink); border-color: rgba(255,255,255,0.55); }
+  .band .flow-out .flow-tag { background: rgba(255,255,255,0.16); color: #fff; border-color: rgba(255,255,255,0.6); font-weight: 500; }
+  .band .flow-hub { box-shadow: 0 20px 44px -22px rgba(0,0,0,0.5); }
 
   /* ---------- Feature rows ---------- */
   .feat { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(22px, 3.5vw, 44px); align-items: center; }
@@ -817,7 +821,7 @@
           <span class="flow-tag">Delivery</span>
           <span class="flow-tag">Fiados</span>
           <span class="flow-tag">Marketing</span>
-          <span class="flow-tag" style="border-color:#fff;color:#fff;background:rgba(255,255,255,0.12);font-weight:700">¿Cuánto ganaste?</span>
+          <span class="flow-tag" style="border-color:#fff;color:var(--brand-deep);background:#fff;font-weight:800">¿Cuánto ganaste?</span>
         </div>
       </div>
       <p>Cada parte de tu negocio mueve dinero. ZIZY conecta esas partes para que no tengas que reconstruir todo mentalmente al terminar la noche.</p>
