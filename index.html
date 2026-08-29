@@ -1196,10 +1196,40 @@
     if (!canvas || reduce) return;
     var ctx = canvas.getContext('2d');
     var hero = canvas.parentElement;
-    var FOODS = ['🍔', '🍕', '🍟', '🌭', '🥤', '🌮', '🍗', '🥗'];
     var BRAND = '109,75,255';               // violeta ZIZY
     var LINK = 150;                         // distancia máx. para unir con línea
     var pts = [], W = 0, H = 0, dpr = 1, raf = 0, running = true;
+
+    // Íconos de comida como siluetas vectoriales (a medida, en caja 0..24).
+    // Un solo color: no dependen del emoji del sistema y se ven parejos.
+    var ICONS = {
+      burger: [
+        'M3 9.5 C3 4.5 21 4.5 21 9.5 Z',
+        'M2.8 11 H21.2 V13.4 H2.8 Z',
+        'M3.4 15.2 H20.6 C20.6 18.4 18.8 19.6 16.5 19.6 H7.5 C5.2 19.6 3.4 18.4 3.4 15.2 Z'
+      ],
+      pizza: [
+        'M3.5 4 Q12 2 20.5 4 L19.6 7 Q12 5.2 4.4 7 Z',
+        'M5 7.4 H19 L12 21 Z'
+      ],
+      cup: [
+        'M5.5 5 H18.5 V7 H5.5 Z',
+        'M6.2 7.6 H17.8 L16.6 20 C16.5 21.2 15.6 21.8 14.4 21.8 H9.6 C8.4 21.8 7.5 21.2 7.4 20 Z',
+        'M14 7 L16.2 2.8 H18 L15.7 7 Z'
+      ],
+      fries: [
+        'M7.5 4 H9.2 V11 H7.5 Z',
+        'M11 2.6 H12.7 V11 H11 Z',
+        'M14.5 4 H16.2 V11 H14.5 Z',
+        'M5.8 11 H18.2 L16.9 20.4 C16.75 21.4 16 22 15 22 H9 C8 22 7.25 21.4 7.1 20.4 Z'
+      ]
+    };
+    var ICON_KEYS = Object.keys(ICONS);
+    // Precompilar los Path2D una sola vez (rinde mejor).
+    var ICON_PATHS = {};
+    ICON_KEYS.forEach(function (k) {
+      ICON_PATHS[k] = ICONS[k].map(function (d) { return new Path2D(d); });
+    });
 
     function rand(a, b) { return a + Math.random() * (b - a); }
 
@@ -1215,11 +1245,12 @@
       pts = [];
       var i;
       for (i = 0; i < nFood; i++) {
-        pts.push({ food: FOODS[i % FOODS.length], x: rand(0, W), y: rand(0, H),
-                   vx: rand(-0.18, 0.18), vy: rand(-0.18, 0.18), r: rand(15, 22) });
+        pts.push({ icon: ICON_KEYS[i % ICON_KEYS.length], x: rand(0, W), y: rand(0, H),
+                   vx: rand(-0.18, 0.18), vy: rand(-0.18, 0.18), r: rand(28, 40),
+                   rot: rand(-0.35, 0.35) });
       }
       for (i = 0; i < nNode; i++) {
-        pts.push({ food: null, x: rand(0, W), y: rand(0, H),
+        pts.push({ icon: null, x: rand(0, W), y: rand(0, H),
                    vx: rand(-0.22, 0.22), vy: rand(-0.22, 0.22), r: rand(1.6, 3) });
       }
     }
@@ -1246,15 +1277,20 @@
           }
         }
       }
-      // puntos: nodos violeta + comida
+      // puntos: nodos violeta + siluetas de comida
       for (i = 0; i < pts.length; i++) {
         a = pts[i];
-        if (a.food) {
-          ctx.globalAlpha = 0.45;
-          ctx.font = a.r * 2 + 'px "Segoe UI Emoji","Apple Color Emoji",system-ui';
-          ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-          ctx.fillText(a.food, a.x, a.y);
-          ctx.globalAlpha = 1;
+        if (a.icon) {
+          var s = a.r / 24;
+          ctx.save();
+          ctx.translate(a.x, a.y);
+          ctx.rotate(a.rot);
+          ctx.scale(s, s);
+          ctx.translate(-12, -12);          // centrar la caja 0..24
+          ctx.fillStyle = 'rgba(' + BRAND + ',0.22)';
+          var paths = ICON_PATHS[a.icon];
+          for (var p = 0; p < paths.length; p++) ctx.fill(paths[p]);
+          ctx.restore();
         } else {
           ctx.beginPath(); ctx.arc(a.x, a.y, a.r, 0, 6.2832);
           ctx.fillStyle = 'rgba(' + BRAND + ',0.55)'; ctx.fill();
